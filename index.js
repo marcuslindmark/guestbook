@@ -9,14 +9,19 @@ import pg from 'pg';
 const app = express();
 const port = 3000;
 
-
+// GAMMAL KOD!
 // Konfigurerar PostgreSQL databasen
+//const db = new pg.Pool({
+//  user: 'postgres',
+//  host: 'localhost',
+//  database: 'guestbook',
+//  password: '12345',
+//  port: 5432,
+//});
+
 const db = new pg.Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'guestbook',
-  password: '12345',
-  port: 5432,
+  connectionString: process.env.DATABASE_URL,
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
 });
 
 
