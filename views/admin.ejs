@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Hantera Gästboksinlägg</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Admin - Hantera Gästboksinlägg</h1>
+    <br />
+<ul>
+
+  <ul>
+    <!-- Loopar igenom alla gästboksinlägg och skriver ut dem -->
+    <% guestbook.forEach(entry => { %>
+      <li>
+        <h2><%= entry.namn %>:</h2>
+        
+        <!-- Formulär för att uppdatera inlägg -->
+        <form action="/update/<%= entry.id %>" method="POST">
+          <input type="text" id="update" name="newMessage" value="<%= entry.meddelande %>" required>
+          <br /><br />
+          <button type="submit">Uppdatera</button>
+        </form>
+        <br />
+        
+        <!-- Formulär för att ta bort inlägg -->
+        <form action="/delete/<%= entry.id %>" method="POST">
+          <button type="submit">Ta bort</button>
+        </form>
+      </li>
+      <br />
+    <% }); %>
+  </ul>
+
+</body>
+</html>

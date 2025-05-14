@@ -1,0 +1,72 @@
+/* Body stylas här */
+body {
+        /* Bakgrundsfärg för hela sidan */
+        background-color: rgb(219, 204, 181); 
+    }
+
+/* Namnrutan */
+#name {
+    width: 200px;
+    height: 20px; 
+}
+
+/* Meddelanderutan */
+#message {
+    width: 200px; /* Fyller hela bredden */
+    height: 150px; /* Sätter höjden */
+}
+
+/* Uppdateringsrutan - Adminsidan */
+#update {
+    width: 300px; /* Sätter bredden */
+    height: 40px; /* Sätter höjden */
+}
+
+
+/* Stil för knappen */
+button {
+background-color: #3498db; /* Blå bakgrundsfärg */
+color: white; /* Vit textfärg */
+border: 2px solid #2980b9; /* Tunn blå kant */
+padding: 12px 24px; /* Padding för större knapp */
+font-size: 16px; /* Textstorlek */
+font-weight: bold; /* Fet stil på texten */
+border-radius: 8px; /* Rundade hörn */
+text-align: center; /* Textcentrering */
+cursor: pointer; /* Gör att muspekaren ändras till hand */
+transition: all 0.3s ease; /* Mjuk övergång för alla ändringar */
+}
+
+/* När muspekaren är över knappen (hover-effekt) */
+button:hover {
+    background-color: #2980b9; /* Mörkare blå vid hover */
+    border-color: #1c6ea4; /* Mörkare blå kant vid hover */
+    transform: scale(1.1); /* Gör knappen lite större vid hover */
+}
+
+/* När knappen är nedtryckt (active state) */
+button:active {
+    background-color: #1c6ea4; /* Ännu mörkare blå när knappen trycks */
+    transform: scale(1); /* Återställ storleken när knappen trycks */
+}
+
+/* Stil för h1 */
+h1 {
+    font-family: "Sacramento", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Stil för h2 */
+h2 {
+    font-family: "Sacramento", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Stil för label */
+label { 
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+}

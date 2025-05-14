@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Gästbok</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h1 {
+      color: #333;
+    }
+    .entry {
+      border-bottom: 1px solid #ccc;
+      padding: 0.5rem 0;
+    }
+    .entry:last-child {
+      border-bottom: none;
+    }
+    .name {
+      font-weight: bold;
+    }
+    .message {
+      margin-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gästbok</h1>
+
+  <% if (entries.length === 0) { %>
+    <p>Inga inlägg ännu.</p>
+  <% } else { %>
+    <% entries.forEach(entry => { %>
+      <div class="entry">
+        <span class="name"><%= entry.namn %></span>
+        <span class="message"><%= entry.meddelande %></span>
+      </div>
+    <% }) %>
+  <% } %>
+</body>
+</html>
